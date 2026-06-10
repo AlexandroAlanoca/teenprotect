@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeenProtect</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="js/darkmode.js" defer></script>
+</head>
+<body>
+    <!--Barra de navegação-->
+    <div class="menu-overlay" onclick="menuShow()"></div>
+    <header>
+        
+        <nav>
+            <a href="/" id="logo">
+                <img src="img/logosite0.png" alt="">
+            </a>
+
+            <ul id="nav-links">
+                <li><a href="/denuncia" data-link data-i18n="reportBt">Denúncia</a></li>
+                <li><a href="/contato" data-link data-i18n="contactBt">Contato</a></li>
+            </ul>
+            
+            <div id="menu" >
+                
+                <div id="MENU" onclick="menuShow()">
+                    <!--<span>MENU</span>-->
+                    <div id="menu-lines" >
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                    </div>
+                </div>
+                
+                    <div class="menu-lateral">
+                        <div id="menu-header">
+                            <div id="menu-button-fechar" onclick="menuClose()">
+                                <i class="fa-duotone fa-solid fa-x"></i>
+                            </div> 
+                        
+                            <p style="color: black; ">TeenProtect</p>
+                        </div>
+
+                        <div id="menu-buttons">
+                            <a href="/login">Login</a>
+                            <a href="/cadastro">Cadastre-se</a>    
+                        </div>
+
+                        <div id="menu-language-section">
+                            <h3>Idioma</h3>
+                            <label><input type="radio" name="idioma" value="pt"><span>Português</span></label>
+                            <label><input type="radio" name="idioma" value="en"><span>Inglês</span></label>
+                            <label><input type="radio" name="idioma" value="es"><span>Espanhol</span></label>
+                        </div>
+
+                        <div id="menu-theme-section">
+                            <h3 id="theme-switch">Temas</h3>
+                            <label><input type="radio" name="tema" value="light"><span>Claro</span></label>
+                            <label><input type="radio" name="tema" value="dark" ><span>Escuro</span></label>
+                        </div>
+
+                        <div id="menu-social-section">
+                            <h3>Redes Sociais</h3>
+                            <div id="menu-social-icons">
+                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            </div>    
+                        </div>
+                    </div>
+
+            </div>
+        </nav>
+     
+    </header>
+
+    <!--Conteúdo-->
+    <main id="app">
+        <!--
+        <div class="home-page">
+            <h1>O que é aliciamento?</h1>
+            <img src="" alt="">
+            <p>O aliciamento nas mídias sociais ocorre quando alguém utiliza plataformas digitais para ganhar a confiança de outra pessoa com o objetivo de manipulá-la, explorá-la ou envolvê-la em atividades prejudiciais.
+                Esse processo geralmente acontece de forma gradual. O aliciador pode se passar por alguém confiável, criar vínculos emocionais e, aos poucos, induzir a vítima a tomar decisões que podem colocá-la em perigo.</p>
+            
+            <h2>Como acontece?</h2>
+
+            <span>O aliciamento costuma seguir alguns padrões:</span>
+            <ul>
+                <li>Contato inicial amigável: o agressor inicia uma conversa de forma aparentemente inocente;</li>
+                <li>Criação de confiança: demonstra interesse, atenção e apoio emocional;</li>
+                <li>Isolamento: tenta afastar a vítima de amigos e familiares;</li>
+                <li>Manipulação emocional: usa ameaças, chantagens ou promessas falsas;</li>
+                <li>Exploração: pode envolver envio de imagens, encontros presenciais ou atividades ilegais.</li>
+            </ul>
+
+            <h2>Como se proteger?</h2>
+
+            <span>Algumas atitudes simples podem fazer grande diferença:</span>
+            <ul>
+                <li> Não compartilhe informações pessoais com desconhecidos;</li>
+                <li> Configure a privacidade das suas redes sociais;</li>
+                <li> Evite aceitar solicitações de pessoas que você não conhece;</li>
+                <li> Converse com alguém de confiança se algo parecer errado;</li>
+                <li> Nunca envie fotos íntimas para pessoas desconhecidas.</li>
+            </ul>
+        
+            <h2>Denuncie</h2>
+        
+            <span>Ao identificar qualquer situação suspeita, denuncie imediatamente. Sua ação pode salvar vidas.</span>
+        
+            <button onclick="denunciaPageOpen()">Fazer denuncia</button>
+
+        </div>-->
+
+        <!--Página de denuncia-->
+        <!--
+        <div  class="denuncia-page">
+            <form id="denuncia-form" action="">
+                <h1>Denunciar Aliciamento</h1>
+                <p>Preencha as informações abaixo:</p>
+
+                <span>Tipo de denuncia:</span>
+                <select name="tipo-de-denuncia" id="">
+                    <option value="">Aliciamento online</option>
+                    <option value="">Aliciamento presencial</option>
+                </select>
+
+                <span>Descrição:</span>
+                <textarea style="resize: vertical;" name="descricao" id="descricao"></textarea>
+
+                <span>Data do ocorrido:</span>
+                <input type="date">
+
+                <span>Anexar evidências:</span>
+                <input id="file-button" type="file">
+
+                <button>Enviar denúncia</button>
+            </form>
+            <form id="denuncia-form-protocol" action="">
+                <h2>Acompanhe a sua denúncia</h2>
+                <div id="campo-protocolo-denuncia">
+                    <span>Protocolo da denúncia:</span>
+                    <input type="text">
+                </div>
+                
+            </form>
+        </div>-->
+        
+        <!--Página de Login-->
+        <!--<div class="login-page">
+
+        </div>
+    -->
+        <!--Página de cadastro-->
+        <!--<div class="cadastro-page">
+
+        </div>
+    -->
+    </main>
+
+    <!--Rodapé-->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="./img/logosite(escudo).png" alt="">
+                
+            </div>
+            <div class="footer-links">
+                <a onclick="showPage('home')">Início</a><span class="footer-sep">|</span>
+                <a href="#">Política de privacidade</a><span class="footer-sep">|</span>
+                <a onclick="showPage('denuncia')">Denúncia</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            
+        </div>
+        <div class="footer-copy">© 2026 Copyright</div>
+    </footer>
+    <!--1360x768 tam da tela-->
+    <script src="js/app.js"></script>
+    <script src="js/script.js" defer></script>
+</body>
+</html>
