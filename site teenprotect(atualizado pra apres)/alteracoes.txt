@@ -1,0 +1,2 @@
+instalei cors no server.js
+
