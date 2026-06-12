@@ -1,0 +1,25 @@
+CREATE DATABASE teenprotect;
+
+USE teenprotect;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE denuncias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id INT NULL,
+    protocolo VARCHAR(20) UNIQUE,
+    tipo_denuncia VARCHAR(50) NOT NULL,
+    descricao TEXT NOT NULL,
+    data_ocorrido DATE NOT NULL,
+    evidencia VARCHAR(255),
+    data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (usuario_id)
+    REFERENCES usuarios(id)
+);
